@@ -19,7 +19,7 @@ export const FeedPage = () => {
       })
       .catch((e) => {
         console.error(e);
-        setError(e); 
+        setError(e);
         setLoading(false);
       });
   }, []);
@@ -37,18 +37,29 @@ export const FeedPage = () => {
       {loading ? (
         <p>Carregando...</p>
       ) : error ? (
-        <p></p>
+        <p>Ocorreu um erro.</p>
       ) : recipe.length === 0 ? (
-        <p></p>
+        <p>Nenhuma receita disponível.</p>
       ) : (
-        recipe.slice(0, 30).map((recipe, i) => (
-          <RecipeCardStyled key={i} onClick={() => onClickCard(recipe.id)}>
-            <img src={recipe.imageUrl} alt={`Receita ${i}`} />
-            <h3>{recipe.title}</h3>
-          </RecipeCardStyled>
-        ))
+        recipe.slice(0, 100)
+          .filter((recipe) => isValidImageURL(recipe.imageUrl))
+          .map((recipe, i) => (
+            <RecipeCardStyled key={i} onClick={() => onClickCard(recipe.id)}>
+              <img src={recipe.imageUrl} alt={`Receita ${i}`} />
+              <h3>{recipe.title}</h3>
+            </RecipeCardStyled>
+          ))
       )}
       <Button onClick={() => onClickAddButton()} variant="add-recipe">+</Button>
     </FeedContainerStyled>
   );
 };
+
+// Função para verificar se a URL da imagem é válida
+const isValidImageURL = (url) => {
+  if (!url) return false; 
+
+  
+  const imageExtensions = [".jpg", ".jpeg", ".png", ".gif",".bmp", ".tiff", ".svg", ".webp", ".raw", ".cr2", ".nef"];
+  return imageExtensions.some(extension => url.toLowerCase().endsWith(extension));
+}

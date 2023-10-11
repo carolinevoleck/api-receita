@@ -5,7 +5,7 @@ export const theme = extendTheme({
     Button: {
       variants: {
         header: {
-          bg: "amarelo.500", 
+          bg: "orange", 
         },
         "form-main": {
           width: "100%",

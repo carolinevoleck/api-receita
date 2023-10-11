@@ -26,7 +26,7 @@ export const RecipeDetailPage = () => {
     }, [id]);
 
     return !recipe ? (
-        <h1>......</h1>
+        <h2>Carregando...</h2>
     ) : (
         <PageContainer>
             <img src={recipe.imageUrl} alt="Imagem da receita" />

@@ -22,7 +22,7 @@ const neon = keyframes`
 export const HeaderStyled = styled.header`
   height: 10vh;
   width: 100vw;
-  background-color: ${theme.colors.amarelo};
+  background-color: orange;
   display: flex;
   flex-direction: row;
   padding: 15px;

@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const FeedContainerStyled = styled.div `
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 80vw;
-    justify-items: center;
-    grid-gap: 10px;
-    padding-top: 20px;
-    margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 80vw;
+        justify-items: center;
+        grid-gap: 10px;
+        padding-top: 20px;
+        margin: 0 auto;
+        
     p{
         display: flex;
         justify-content: center;
@@ -34,24 +35,32 @@ export const RecipeCardStyled = styled.div`
 
   &:hover {
     transform: scale(1.05);
+
   }
 
   img {
     width: 100%;
-    max-height: 250px;
+    height:13.75rem;
+    justify-items: center;
     object-fit: cover;
+    position:sticky ;
   }
 
   h3 {
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 16px;
+    position:static;
   }
 
   @media (max-width: 768px) {
-    
     max-width: 100%;
-    margin: 0 auto; 
+    margin: 0 auto;
+    padding: 10px;
+    
+    h3 {
+      font-size: 14px;
+    }
   }
-  
 `;

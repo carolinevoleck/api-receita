@@ -36,7 +36,7 @@ export const CenteredPageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: orange;
 `;
 
 export const FormContainer = styled.div`
