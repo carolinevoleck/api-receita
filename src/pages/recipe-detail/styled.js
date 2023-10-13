@@ -8,22 +8,22 @@ export const PageContainer = styled.div`
   min-height: 50vh;
   
   p {
-    max-width: 30vw; /* Aumente a largura máxima para ajustar o texto em telas menores */
-    text-align: center;
-    margin-top: 20px;
+    max-width: 30vw; 
+    justify-content: center;
+    margin-top: 1.25rem;
   }
   
   img {
-    width: 30vw; /* Ajuste o tamanho da imagem para se adequar a telas menores */
-    max-height: 30vw; /* Remova a altura máxima da imagem para manter a proporção */
-    margin-top: 70px; /* Reduza a margem superior para economizar espaço */
-    border-radius: 8px;
+    width: 30vw; 
+    max-height: 30vw; 
+    margin-top: 4.375rem; 
+    border-radius: 0.5rem;
   }
   
   h1 {
     text-align: center;
-    margin-top: 10px;
-    font-size: 16px; /* Reduza o tamanho da fonte para dispositivos móveis */
+    margin-top: 0.625rem;
+    font-size: 1rem; /* Reduza o tamanho da fonte para dispositivos móveis */
     font-style: oblique;
     font-weight: 100;
   }
@@ -33,16 +33,21 @@ export const PageContainer = styled.div`
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 40px; 
-        font-size: 24px; 
+        padding: 2.5rem; 
+        font-size: 1.5rem; 
         max-width: 80%; 
         margin: 0 auto;
-        min-height: 200px;
+        min-height: 12.5rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     img {
-      width: 50vw; /* Ajuste ainda mais o tamanho da imagem para telas pequenas */
+      width: 50vw; 
+    }
+    p {
+      max-width: 50vw; 
+      justify-content: center;
+      margin-top: 1.25rem;
     }
   }
 `;

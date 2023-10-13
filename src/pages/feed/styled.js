@@ -1,66 +1,55 @@
 import styled from 'styled-components';
 
-export const FeedContainerStyled = styled.div `
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        width: 80vw;
-        justify-items: center;
-        grid-gap: 10px;
-        padding-top: 20px;
-        margin: 0 auto;
-        
-    p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 40px; 
-        font-size: 24px; 
-        max-width: 80%; 
-        margin: 0 auto;
-        min-height: 200px;
-        
-    }
+export const FeedContainerStyled = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100vw;
+  justify-items: center;
+  grid-gap: 0.625rem;
+  padding-top: 1.25rem;
+  margin: 0 auto;
 
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 1.5rem;
+    max-width: 80%;
+    margin: 0 auto;
+    min-height: 12.5rem;
+  }
 `;
 
 export const RecipeCardStyled = styled.div`
-  width: 100%;
-  max-width: 300px;
-  border: 2px solid yellow;
-  border-radius: 10px;
+  width: 80%;
+  max-width: 18.75rem;
+  border: 0.125rem solid yellow;
+  border-radius: 0.625rem;
   transition: transform 0.5s;
   cursor: pointer;
-  position: relative; 
+  position: relative;
 
   &:hover {
     transform: scale(1.05);
-
   }
 
   img {
     width: 100%;
-    height:13.75rem;
-    justify-items: center;
+    height: 220px;
     object-fit: cover;
-    position:sticky ;
   }
 
   h3 {
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    position:static;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 768px) {
     max-width: 100%;
-    margin: 0 auto;
-    padding: 10px;
-    
-    h3 {
-      font-size: 14px;
-    }
+    grid-template-columns: 1fr 1fr;
   }
 `;

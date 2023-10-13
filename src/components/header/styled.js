@@ -1,21 +1,21 @@
 import styled, { keyframes } from 'styled-components';
-import { theme } from '../../styles';
+
 
 const neon = keyframes`
   0% {
-    box-shadow: 0 0 30px rgba(255, 255, 0, 0.5),
-                0 0 50px rgba(255, 255, 0, 0.5),
-                0 0 80px rgba(255, 255, 0, 0.5);
+    box-shadow: 0 0 1.875rem rgba(255, 255, 0, 0.5),
+                0 0 3.125rem rgba(255, 255, 0, 0.5),
+                0 0 5rem rgba(255, 255, 0, 0.5);
   }
   50% {
-    box-shadow: 0 0 50px rgba(255, 255, 0, 1),
-                0 0 80px rgba(255, 255, 0, 1),
-                0 0 90px rgba(255, 255, 0, 1);
+    box-shadow: 0 0 3.125rem rgba(255, 255, 0, 1),
+                0 0 5rem rgba(255, 255, 0, 1),
+                0 0 5.625rem rgba(255, 255, 0, 1);
   }
   100% {
-    box-shadow: 0 0 90px rgba(255, 255, 0, 0.5),
-                0 0 90px rgba(255, 255, 0, 0.5),
-                0 0 90px rgba(255, 255, 0, 0.5);
+    box-shadow: 0 0 5.625rem rgba(255, 255, 0, 0.5),
+                0 0 5.625rem rgba(255, 255, 0, 0.5),
+                0 0 5.625rem rgba(255, 255, 0, 0.5);
   }
 `;
 
@@ -25,20 +25,27 @@ export const HeaderStyled = styled.header`
   background-color: orange;
   display: flex;
   flex-direction: row;
-  padding: 15px;
+  padding: 0.625rem;
   justify-content: space-between;
   align-items: center;
   position: relative; 
   &::before {
     content: '';
     position: absolute;
-    top: -3px; 
-    left: -3px; 
-    right: -3px; 
-    bottom: 1px; 
-    box-shadow: 0 0 80px rgba(255, 255, 0, 0.5), 
-                0 0 80px rgba(255, 255, 0, 0.5), 
-                0 0 80px rgba(255, 255, 0, 0.5); 
+    top: -0.1875rem; 
+    left: -0.1875rem; 
+    right: -0.1875rem; 
+    bottom: 0.0625rem; 
+    box-shadow: 0 0 5rem rgba(255, 255, 0, 0.5), 
+                0 0 5rem rgba(255, 255, 0, 0.5), 
+                0 0 5rem rgba(255, 255, 0, 0.5); 
     animation: ${neon} 10s linear infinite;
+  }
+
+  @media (max-width: 768px) {
+  
+  width: 100vw;
+  padding: 1.25rem;
+ 
   }
 `;
